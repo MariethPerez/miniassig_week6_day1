@@ -1,0 +1,37 @@
+<%= form_with(model: alquiler, local: true) do |form| %>
+  <% if alquiler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alquiler.errors.count, "error") %> prohibited this alquiler from being saved:</h2>
+
+      <ul>
+      <% alquiler.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fecha_alquiler %>
+    <%= form.date_select :fecha_alquiler %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_devolucion %>
+    <%= form.date_select :fecha_devolucion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cassete_id %>
+    <%= form.text_field :cassete_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :miembro_id %>
+    <%= form.text_field :miembro_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

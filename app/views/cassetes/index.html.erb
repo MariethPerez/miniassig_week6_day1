@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cassetes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Formato</th>
+      <th>Pelicula</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cassetes.each do |cassete| %>
+      <tr>
+        <td><%= cassete.formato %></td>
+        <td><%= cassete.pelicula %></td>
+        <td><%= link_to 'Show', cassete %></td>
+        <td><%= link_to 'Edit', edit_cassete_path(cassete) %></td>
+        <td><%= link_to 'Destroy', cassete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cassete', new_cassete_path %>

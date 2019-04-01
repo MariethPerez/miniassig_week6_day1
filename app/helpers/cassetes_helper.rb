@@ -1,0 +1,2 @@
+module CassetesHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Formato:</strong>
+  <%= @cassete.formato %>
+</p>
+
+<p>
+  <strong>Pelicula:</strong>
+  <%= @cassete.pelicula %>
+</p>
+
+<%= link_to 'Edit', edit_cassete_path(@cassete) %> |
+<%= link_to 'Back', cassetes_path %>

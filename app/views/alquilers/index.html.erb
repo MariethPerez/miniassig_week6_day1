@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Alquilers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha alquiler</th>
+      <th>Fecha devolucion</th>
+      <th>Cassete</th>
+      <th>Miembro</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alquilers.each do |alquiler| %>
+      <tr>
+        <td><%= alquiler.fecha_alquiler %></td>
+        <td><%= alquiler.fecha_devolucion %></td>
+        <td><%= alquiler.cassete %></td>
+        <td><%= alquiler.miembro %></td>
+        <td><%= link_to 'Show', alquiler %></td>
+        <td><%= link_to 'Edit', edit_alquiler_path(alquiler) %></td>
+        <td><%= link_to 'Destroy', alquiler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alquiler', new_alquiler_path %>
