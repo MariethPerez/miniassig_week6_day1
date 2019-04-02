@@ -14,8 +14,8 @@
   <tbody>
     <% @repartos.each do |reparto| %>
       <tr>
-        <td><%= reparto.actor %></td>
-        <td><%= reparto.pelicula %></td>
+        <td><%= reparto.actor.name %></td>
+        <td><%= reparto.pelicula.titulo %></td>
         <td><%= link_to 'Show', reparto %></td>
         <td><%= link_to 'Edit', edit_reparto_path(reparto) %></td>
         <td><%= link_to 'Destroy', reparto, method: :delete, data: { confirm: 'Are you sure?' } %></td>

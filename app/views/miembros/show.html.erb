@@ -15,5 +15,16 @@
   <%= @miembro.direccion %>
 </p>
 
+
+<h3>Alquileres</h3>
+<ul>
+  <% @miembro.alquilers.each do | alquiler | %>
+    <li>
+    <%= alquiler.cassete.pelicula.titulo %>
+    <%= alquiler.fecha_alquiler %>
+    </li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_miembro_path(@miembro) %> |
 <%= link_to 'Back', miembros_path %>

@@ -7,8 +7,18 @@
 
 <p>
   <strong>Pelicula:</strong>
-  <%= @cassete.pelicula %>
+  <%= @cassete.pelicula.titulo %>
 </p>
+
+<h3>Alquileres</h3>
+<ul>
+  <% @cassete.alquilers.each do | alquiler | %>
+    <li>
+    <%= alquiler.cassete.pelicula.titulo %>
+    <%= alquiler.fecha_alquiler %>
+    </li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_cassete_path(@cassete) %> |
 <%= link_to 'Back', cassetes_path %>

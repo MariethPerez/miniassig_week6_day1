@@ -2,13 +2,14 @@
 
 <p>
   <strong>Actor:</strong>
-  <%= @reparto.actor %>
+  <%= @reparto.actor.name %>
 </p>
 
 <p>
   <strong>Pelicula:</strong>
-  <%= @reparto.pelicula %>
+  <%= @reparto.pelicula.titulo %>
 </p>
+
 
 <%= link_to 'Edit', edit_reparto_path(@reparto) %> |
 <%= link_to 'Back', repartos_path %>

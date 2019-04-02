@@ -12,12 +12,12 @@
 
 <p>
   <strong>Cassete:</strong>
-  <%= @alquiler.cassete %>
+  <%= @alquiler.cassete.pelicula.titulo %>
 </p>
 
 <p>
   <strong>Miembro:</strong>
-  <%= @alquiler.miembro %>
+  <%= @alquiler.miembro.name  %>
 </p>
 
 <%= link_to 'Edit', edit_alquiler_path(@alquiler) %> |

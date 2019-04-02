@@ -10,5 +10,15 @@
   <%= @pelicula.categoria %>
 </p>
 
+<h3>Actors</h3>
+<ul>
+  <% @pelicula.repartos.each do | reparto | %>
+    <li>
+    <%= link_to reparto.actor.name, reparto.actor %>
+    </li>
+  <% end %>
+</ul>
+
+
 <%= link_to 'Edit', edit_pelicula_path(@pelicula) %> |
 <%= link_to 'Back', peliculas_path %>

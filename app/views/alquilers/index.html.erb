@@ -7,7 +7,8 @@
     <tr>
       <th>Fecha alquiler</th>
       <th>Fecha devolucion</th>
-      <th>Cassete</th>
+      <th>Cassete Formato</th>
+      <th>Cassete Pelicula </th>
       <th>Miembro</th>
       <th colspan="3"></th>
     </tr>
@@ -18,8 +19,9 @@
       <tr>
         <td><%= alquiler.fecha_alquiler %></td>
         <td><%= alquiler.fecha_devolucion %></td>
-        <td><%= alquiler.cassete %></td>
-        <td><%= alquiler.miembro %></td>
+        <td><%= alquiler.cassete.formato %></td>
+        <td><%= alquiler.cassete.pelicula.titulo %></td>
+        <td><%= alquiler.miembro.name %></td>
         <td><%= link_to 'Show', alquiler %></td>
         <td><%= link_to 'Edit', edit_alquiler_path(alquiler) %></td>
         <td><%= link_to 'Destroy', alquiler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
